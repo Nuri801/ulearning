@@ -25,7 +25,7 @@ class Welcome extends StatelessWidget {
                 imagePath: 'assets/images/boy.png',
                 firstText: 'Study time',
                 secondText: 'Explore the world of wonders by expanding your knowledge',
-              )
+              ),
             ],
           )
         ],
