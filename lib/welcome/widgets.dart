@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../common/widgets.dart';
-
 Widget onBoardingPage({
   required String imagePath,
   required String firstText,
