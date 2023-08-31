@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ulearning/welcome/widgets.dart';
-
+// this is the welcome page:
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
   @override
