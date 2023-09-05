@@ -4,6 +4,8 @@ import 'package:ulearning/welcome/widgets.dart';
 
 // this is the welcome page:
 
+// we need an init function here to be able to initialize the properties.
+
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
   @override
