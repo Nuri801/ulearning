@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 Widget text24normal({required String text}) {
   return Text(
     text,
