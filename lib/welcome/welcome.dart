@@ -31,6 +31,5 @@ class Welcome extends StatelessWidget {
         ],
       ),
     );
-
   }
 }
