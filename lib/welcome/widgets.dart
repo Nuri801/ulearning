@@ -6,7 +6,6 @@ Widget onBoardingPage({
   required String secondText,
 }) {
   return Column(
-
     children: [
       Image.asset(imagePath),
       Padding(
