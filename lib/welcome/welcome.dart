@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ulearning/welcome/widgets.dart';
 class Welcome extends StatelessWidget {
+
   const Welcome({super.key});
   @override
   Widget build(BuildContext context) {
@@ -31,4 +32,5 @@ class Welcome extends StatelessWidget {
       ),
     );
   }
+
 }
