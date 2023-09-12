@@ -10,6 +10,7 @@ class Welcome extends StatelessWidget {
         children: [
           PageView(
             children: [
+
               onBoardingPage(
                 imagePath: 'assets/images/reading.png',
                 firstText: 'Study time',
@@ -25,6 +26,7 @@ class Welcome extends StatelessWidget {
                 firstText: 'Study time',
                 secondText: 'Explore the world of wonders by expanding your knowledge',
               ),
+
             ],
           )
         ],
