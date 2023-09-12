@@ -21,6 +21,5 @@ Widget onBoardingPage({
         ),
       )
     ],
-
   );
 }
