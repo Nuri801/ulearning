@@ -35,6 +35,4 @@ class Welcome extends StatelessWidget {
     );
 
   }
-
-
 }
