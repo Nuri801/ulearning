@@ -22,5 +22,4 @@ Widget onBoardingPage({
       )
     ],
   );
-
 }
