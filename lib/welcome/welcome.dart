@@ -32,4 +32,5 @@ class Welcome extends StatelessWidget {
       ),
     );
   }
+
 }
