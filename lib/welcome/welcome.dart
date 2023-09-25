@@ -15,13 +15,11 @@ class Welcome extends StatelessWidget {
                 firstText: 'Study time',
                 secondText: 'Explore the world of wonders by expanding your knowledge',
               ),
-
               onBoardingPage(
                 imagePath: 'assets/images/man.png',
                 firstText: 'Study time',
                 secondText: 'Explore the world of wonders by expanding your knowledge',
               ),
-
               onBoardingPage(
                 imagePath: 'assets/images/boy.png',
                 firstText: 'Study time',
