@@ -5,6 +5,7 @@ Widget onBoardingPage({
   required String firstText,
   required String secondText,
 }) {
+
   return Column(
     children: [
       Image.asset(imagePath),
