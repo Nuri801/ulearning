@@ -20,5 +20,4 @@ Widget text16normal({required String text}) {
         fontWeight: FontWeight.normal
     ),
   );
-
 }
