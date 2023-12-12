@@ -10,7 +10,7 @@ Widget text24normal({required String text}) {
     ),
   );
 }
-// this is a widget extraction:
+
 Widget text16normal({required String text}) {
   return Text(
     text,
