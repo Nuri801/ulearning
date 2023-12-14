@@ -31,29 +31,31 @@ class MyHomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     int count = ref.watch(appCount);
     return Scaffold(
-        appBar: AppBar(
-          title: Text("riverpod app"),
-        ),
-        body: Center(
-          child: Text(count.toString()),
-        ),
-        floatingActionButton: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            FloatingActionButton(
-              heroTag: 'fsdaf',
-              child: Icon(Icons.arrow_forward),
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SecondPage()));
-              },
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                ref.read(appCount.notifier).state++;
-              },
-            ),
-          ],
-        ));
+      appBar: AppBar(
+        title: Text("riverpod app"),
+      ),
+      body: Center(
+        child: Text(count.toString()),
+      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          FloatingActionButton(
+            heroTag: 'fsdaf',
+            child: const Icon(Icons.arrow_forward),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => SecondPage()));
+            },
+          ),
+          FloatingActionButton(
+            child: const Icon(Icons.add),
+            onPressed: () {
+              ref.read(appCount.notifier).state++;
+            },
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -64,6 +66,12 @@ class SecondPage extends ConsumerWidget {
     return Scaffold(
       body: Center(
         child: Text(count.toString()),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          ref.read(appCount.notifier).state++;
+        },
       ),
     );
   }
