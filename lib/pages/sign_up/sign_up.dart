@@ -6,7 +6,6 @@ import '../sign_in/widgets.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({super.key});
-
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController idController = TextEditingController();
   final TextEditingController pwController = TextEditingController();
