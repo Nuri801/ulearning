@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ulearning/welcome/welcome.dart';
+import 'package:ulearning/common/utils/app_styles.dart';
+import 'package:ulearning/pages/sign_in/sign_in.dart';
+import 'package:ulearning/pages/sign_up/sign_up.dart';
+import 'package:ulearning/pages/welcome/welcome.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -13,17 +16,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: Welcome(),
+      theme: AppTheme.appThemeData,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => Welcome(),
+        "signIn": (context) => SignIn(),
+        "signUp": (context) => SignUp(),
+      },
+      // home: Welcome(),
     );
   }
 }
 
 final appCount = StateProvider<int>((ref) {
-  return 3;
+  return 5;
 });
 
 class MyHomePage extends ConsumerWidget {

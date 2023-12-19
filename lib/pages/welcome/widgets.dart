@@ -1,8 +1,10 @@
 // import 'dart:ffi' hide Size;
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../common/widgets/app_shadow.dart';
-import '../common/widgets/text_widgets.dart';
+import 'package:ulearning/pages/sign_in/sign_in.dart';
+
+import '../../common/widgets/app_shadow.dart';
+import '../../common/widgets/text_widgets.dart';
 
 // First get the FlutterView.
 FlutterView view = WidgetsBinding.instance.platformDispatcher.views.first;
@@ -17,6 +19,7 @@ Widget onBoardingPage(
   required String title,
   required String subTitle,
   required int index,
+  required BuildContext context,
 }) {
   return Column(
     children: [
@@ -36,17 +39,21 @@ Widget onBoardingPage(
           ],
         ),
       ),
-      _nextButton(controller, index)
+      _nextButton(
+        controller,
+        index,
+        context,
+      )
     ],
   );
 }
 
-Widget _nextButton(PageController controller, int index) {
+Widget _nextButton(PageController controller, int index, BuildContext context) {
   return Padding(
     padding: const EdgeInsets.only(
       top: 70,
-      right: 50,
-      left: 50,
+      right: 30,
+      left: 30,
     ),
     child: GestureDetector(
       onTap: () {
@@ -57,6 +64,14 @@ Widget _nextButton(PageController controller, int index) {
               milliseconds: 600,
             ),
             curve: Curves.decelerate,
+          );
+        } else {
+          Navigator.pushNamed(
+            context,
+            "signIn"
+            // MaterialPageRoute(
+            //   builder: (BuildContext context) => const SignIn(),
+            // ),
           );
         }
       },

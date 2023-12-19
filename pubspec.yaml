@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_riverpod: ^2.3.7
   dots_indicator: ^3.0.0
+  riverpod_generator: ^2.3.9
+  build_runner: ^2.4.7
 
 dev_dependencies:
   flutter_test:

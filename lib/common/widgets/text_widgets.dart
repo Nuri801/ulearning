@@ -22,3 +22,14 @@ Widget text16normal({
     style: TextStyle(color: color, fontSize: 16, fontWeight: FontWeight.normal),
   );
 }
+
+Widget text14normal({
+  required String text,
+  Color color = AppColors.primaryThirdElementText,
+}) {
+  return Text(
+    text,
+    textAlign: TextAlign.start,
+    style: TextStyle(color: color, fontSize: 14, fontWeight: FontWeight.normal),
+  );
+}
