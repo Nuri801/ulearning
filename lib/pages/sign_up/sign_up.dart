@@ -9,7 +9,6 @@ class SignUp extends StatelessWidget {
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController idController = TextEditingController();
   final TextEditingController pwController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
