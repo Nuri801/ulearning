@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ulearning/pages/welcome/widgets.dart';
 import '../sign_in/widgets.dart';
 
+
 class SignUp extends StatelessWidget {
   SignUp({super.key});
   final TextEditingController userNameController = TextEditingController();
