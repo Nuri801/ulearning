@@ -1,17 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ulearning/pages/sign_up/notifier/register_notifier.dart';
 import '../../common/widgets/appbar.dart';
 import '../../common/widgets/text_field.dart';
 import '../sign_in/widgets.dart';
 
-
-class SignUp extends StatelessWidget {
+class SignUp extends ConsumerWidget {
   SignUp({super.key});
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController idController = TextEditingController();
   final TextEditingController pwController = TextEditingController();
+  final TextEditingController confirmPwController = TextEditingController();
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final regProvider = ref.watch(registerNotifierProvider);
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -41,42 +44,45 @@ class SignUp extends StatelessWidget {
                     explanationText("Enter your details below to sign up"),
                     // const Expanded(flex: 1, child: SizedBox()),
                     textField(
-                      "User Name",
-                      userNameController,
-                      Icons.perm_identity,
-                      "Enter user name",
-                      false,
+                      title: "User Name",
+                      controller: userNameController,
+                      prefixIcon: Icons.perm_identity,
+                      hintText: "Enter user name",
+                      isPassWord: false,
+                      func: (value) => ref.read(registerNotifierProvider.notifier).onUserNameChange(value),
                     ),
                     textField(
-                      "Email",
-                      idController,
-                      Icons.email_outlined,
-                      "Enter your email",
-                      false,
+                      title: "Email",
+                      controller: idController,
+                      prefixIcon: Icons.email_outlined,
+                      hintText: "Enter your email",
+                      isPassWord: false,
+                      func: (value) => ref.read(registerNotifierProvider.notifier).onEmailChange(value),
                     ),
                     textField(
-                      "Password",
-                      pwController,
-                      Icons.key,
-                      "Enter your password",
-                      true,
+                      title: "Password",
+                      controller: pwController,
+                      prefixIcon: Icons.key,
+                      hintText: "Enter your password",
+                      isPassWord: true,
+                      func: (value) => ref.read(registerNotifierProvider.notifier).onPasswordChange(value),
                     ),
                     textField(
-                      "Confirm Password",
-                      pwController,
-                      Icons.key,
-                      "Confirm your password",
-                      true,
+                      title: "Confirm Password",
+                      controller: confirmPwController,
+                      prefixIcon: Icons.key,
+                      hintText: "Confirm your password",
+                      isPassWord: true,
                     ),
                     explanationText("By creating an account you are agreeing to our terms & conditions."),
                     // const Expanded(flex: 3, child: SizedBox()),
-                    const SizedBox(height: 60,),
+                    const SizedBox(
+                      height: 60,
+                    ),
                     button(
                       label: "Sign Up",
                       labelColor: Colors.white,
-                      onButtonPressed: () {
-
-                      },
+                      onButtonPressed: () {},
                     ),
                   ],
                 ),

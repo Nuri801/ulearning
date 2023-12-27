@@ -4,13 +4,14 @@ import 'package:ulearning/common/widgets/text_widgets.dart';
 
 import '../utils/app_colors.dart';
 
-Widget textField(
-    String? title,
-    TextEditingController? controller,
-    IconData? prefixIcon,
-    String? hintText,
-    bool? isPassWord,
-    ) {
+Widget textField({
+  String? title,
+  TextEditingController? controller,
+  IconData? prefixIcon,
+  String? hintText,
+  bool? isPassWord,
+  void Function(String)? func,
+}) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 10),
     child: Column(
@@ -21,7 +22,7 @@ Widget textField(
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 5),
           child: TextFormField(
-            onChanged: (value) {},
+            onChanged: (value) => func!(value),
             obscureText: isPassWord ?? false,
             autocorrect: false,
             textInputAction: TextInputAction.done,
