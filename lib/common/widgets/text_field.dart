@@ -11,7 +11,6 @@ Widget textField({
   String? hintText,
   bool? isPassWord,
   void Function(String)? func,
-
 }) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 10),
