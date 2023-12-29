@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ulearning/common/widgets/text_widgets.dart';
-
 import '../utils/app_colors.dart';
 
 Widget textField({
