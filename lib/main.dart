@@ -27,8 +27,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
 final appCount = StateProvider<int>((ref) {
   return 5;
 });
