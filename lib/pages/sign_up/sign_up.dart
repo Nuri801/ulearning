@@ -7,6 +7,7 @@ import '../../common/widgets/text_field.dart';
 import '../sign_in/widgets.dart';
 
 class SignUp extends ConsumerWidget {
+
   SignUp({super.key});
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController idController = TextEditingController();
