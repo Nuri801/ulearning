@@ -32,6 +32,7 @@ final appCount = StateProvider<int>((ref) {
 });
 
 class MyHomePage extends ConsumerWidget {
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     int count = ref.watch(appCount);
