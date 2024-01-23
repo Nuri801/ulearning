@@ -12,7 +12,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -65,6 +65,7 @@ class MyHomePage extends ConsumerWidget {
 }
 
 class SecondPage extends ConsumerWidget {
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     int count = ref.watch(appCount);
@@ -81,3 +82,89 @@ class SecondPage extends ConsumerWidget {
     );
   }
 }
+
+/// Test Concept: Please, Do Not Delete!
+// class HomePage1 extends StatefulWidget {
+//   HomePage1({super.key});
+//
+//   @override
+//   State<HomePage1> createState() => _HomePage1State();
+// }
+//
+// class _HomePage1State extends State<HomePage1> with TickerProviderStateMixin {
+//   late TabController _tabController;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     _tabController = TabController(length: 3, vsync: this);
+//     return Scaffold(
+//       backgroundColor: AppColors.bluePalette100,
+//       appBar: AppBar(
+//         backgroundColor: AppColors.bluePalette100,
+//       ),
+//       body: TabBarView(
+//         controller: _tabController,
+//         children: <Widget>[
+//           Padding(
+//             padding: const EdgeInsets.all(10),
+//             child: Container(
+//               decoration: const BoxDecoration(
+//                 color: AppColors.bluePalette100,
+//                 borderRadius: BorderRadius.all(Radius.circular(10)),
+//               ),
+//             ),
+//           ),
+//           Container(
+//             color: AppColors.bluePalette100,
+//           ),
+//           Container(
+//             color: AppColors.bluePalette100,
+//           ) // page2
+//         ],
+//       ),
+//       bottomNavigationBar: tabBarController(),
+//     );
+//   }
+//
+//   BottomAppBar tabBarController() {
+//     return BottomAppBar(
+//       color: AppColors.bluePalette100,
+//       elevation: 0,
+//       child: SizedBox(
+//         height: 62,
+//         child: TabBar(
+//           labelStyle: const TextStyle(fontSize: 12, color: Colors.white),
+//           controller: _tabController,
+//           indicatorWeight: 1,
+//           indicatorColor: AppColors.bluePalette100,
+//           indicatorPadding: EdgeInsets.all(7),
+//           indicator: const BoxDecoration(
+//             color: Colors.black26,
+//             borderRadius: BorderRadius.all(Radius.circular(6)),
+//             // shape: BoxShape.circle
+//           ),
+//           // labelColor: AppColors.bluePalette20,
+//           labelColor: Colors.pinkAccent,
+//           unselectedLabelColor: Colors.white24,
+//           tabs: const <Widget>[
+//             Tab(
+//                 icon: Icon(
+//               CupertinoIcons.calendar,
+//               size: 35,
+//             )),
+//             Tab(
+//                 icon: Icon(
+//               CupertinoIcons.alarm,
+//               size: 35,
+//             )),
+//             Tab(
+//                 icon: Icon(
+//               CupertinoIcons.person,
+//               size: 35,
+//             )),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
