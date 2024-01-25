@@ -35,6 +35,7 @@ class MyHomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     int count = ref.watch(appCount);
     return Scaffold(
       appBar: AppBar(
