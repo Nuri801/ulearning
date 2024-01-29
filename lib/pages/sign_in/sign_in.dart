@@ -53,7 +53,6 @@ class SignIn extends StatelessWidget {
                   label: "Log In",
                   onButtonPressed: () {Navigator.pushNamed(context, "signUp");},
                 ),
-
                 button(
                   label: "Sign Up",
                   labelColor: Colors.black,
