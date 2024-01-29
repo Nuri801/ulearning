@@ -6,8 +6,10 @@ import '../../common/widgets/text_field.dart';
 
 class SignIn extends StatelessWidget {
   SignIn({super.key});
+
   final TextEditingController idController = TextEditingController();
   final TextEditingController pwController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
