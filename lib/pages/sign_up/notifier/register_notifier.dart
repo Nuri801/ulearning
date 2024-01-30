@@ -22,4 +22,8 @@ class RegisterNotifier extends _$RegisterNotifier {
     state = state.copyWith(password: pw);
   }
 
+  void onRePasswordChange(String repw) {
+    state = state.copyWith(rePassword: repw);
+  }
+
 }

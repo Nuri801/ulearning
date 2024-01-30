@@ -41,6 +41,7 @@ class SignIn extends StatelessWidget {
                   prefixIcon: Icons.email_outlined,
                   hintText: "Enter your email",
                   isPassWord: false,
+                  func: (value) {},
                 ),
                 textField(
                   title: "Password",
@@ -48,18 +49,23 @@ class SignIn extends StatelessWidget {
                   prefixIcon: Icons.key,
                   hintText: "Enter your password",
                   isPassWord: true,
+                  func: (value) {},
                 ),
                 forgotPassWord(),
                 const Expanded(flex: 3, child: SizedBox()),
                 button(
                   label: "Log In",
-                  onButtonPressed: () {Navigator.pushNamed(context, "signUp");},
+                  onButtonPressed: () {
+                    Navigator.pushNamed(context, "signUp");
+                  },
                 ),
                 button(
                   label: "Sign Up",
                   labelColor: Colors.black,
                   foreGroundColor: Colors.white,
-                  onButtonPressed: () {Navigator.pushNamed(context, "signUp");},
+                  onButtonPressed: () {
+                    Navigator.pushNamed(context, "signUp");
+                  },
                 ),
               ],
             ),
