@@ -9,7 +9,6 @@ import 'notifier/welcome_notifier.dart';
 class Welcome extends ConsumerWidget {
   Welcome({super.key});
   final PageController _controller = PageController();
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(indexDotProvider);
