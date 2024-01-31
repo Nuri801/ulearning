@@ -8,7 +8,6 @@ import 'notifier/welcome_notifier.dart';
 
 class Welcome extends ConsumerWidget {
   Welcome({super.key});
-
   final PageController _controller = PageController();
 
   @override
