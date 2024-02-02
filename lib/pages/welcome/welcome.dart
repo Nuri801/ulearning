@@ -12,6 +12,7 @@ class Welcome extends ConsumerWidget {
   final PageController _controller = PageController();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     final index = ref.watch(indexDotProvider);
     print("+++ rebuild...");
     return Container(
