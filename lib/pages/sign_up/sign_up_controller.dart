@@ -7,7 +7,6 @@ class SignUpController {
    SignUpController({required this.ref});
 
    void handleSignUp() {
-
       var state = ref.read(registerNotifierProvider);
 
       String name = state.userName;
