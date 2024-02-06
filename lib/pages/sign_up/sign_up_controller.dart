@@ -8,10 +8,8 @@ class SignUpController {
 
    void handleSignUp() {
       var state = ref.read(registerNotifierProvider);
-
       String name = state.userName;
       String email = state.email;
-
       print(("your name is: ${name}"));
 
    }
