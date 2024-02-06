@@ -11,7 +11,6 @@ class SignUpController {
       String name = state.userName;
       String email = state.email;
       print(("your name is: ${name}"));
-
    }
 
 }
