@@ -26,4 +26,5 @@ class RegisterNotifier extends _$RegisterNotifier {
     state = state.copyWith(rePassword: repw);
   }
 
+
 }
