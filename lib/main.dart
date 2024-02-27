@@ -8,7 +8,6 @@ import 'package:ulearning/pages/welcome/welcome.dart';
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -20,6 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => Welcome(),
+        // "/": (context) => SignUp(),
         "signIn": (context) => SignIn(),
         "signUp": (context) => SignUp(),
       },
@@ -27,9 +27,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-final appCount = StateProvider<int>((ref) {
-  return 5;
-});
+
 
 class MyHomePage extends ConsumerWidget {
 

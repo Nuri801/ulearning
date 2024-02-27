@@ -2,10 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ulearning/pages/sign_up/notifier/register_notifier.dart';
+import 'package:ulearning/pages/sign_up/notifier/register_state.dart';
 import 'package:ulearning/pages/sign_up/sign_up_controller.dart';
 import '../../common/widgets/appbar.dart';
 import '../../common/widgets/text_field.dart';
 import '../sign_in/widgets.dart';
+
+final appCount = StateProvider<int>((ref) {
+  return 5;
+});
 
 class SignUp extends ConsumerStatefulWidget {
   SignUp({super.key});
@@ -24,6 +29,7 @@ class _SignUpState extends ConsumerState<SignUp> {
   @override
   void initState() {
     _controller = SignUpController(ref: ref);
+    _controller.handleSignUp();
     // TODO: implement initState
     super.initState();
   }
@@ -55,6 +61,14 @@ class _SignUpState extends ConsumerState<SignUp> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  Text(
+                    ref.watch(registerNotifierProvider).userName,
+                    // ref.watch(registerNotifierProvider).rePassword,
+                    style: const TextStyle(
+                      fontSize: 30,
+                      color: Colors.red,
+                    ),
+                  ),
                   explanationText("Enter your details below to sign up"),
                   // const Expanded(flex: 1, child: SizedBox()),
                   textField(
@@ -63,7 +77,11 @@ class _SignUpState extends ConsumerState<SignUp> {
                     prefixIcon: Icons.perm_identity,
                     hintText: "Enter user name",
                     isPassWord: false,
-                    func: (value) => ref.read(registerNotifierProvider.notifier).onUserNameChange(value),
+                    func: (value) {
+                      print("+++setting value");
+                      ref.read(registerNotifierProvider.notifier).onUserNameChange(value);
+                      // regProvider.onUserNameChange(value);
+                    },
                   ),
                   textField(
                     title: "Email",
@@ -95,7 +113,7 @@ class _SignUpState extends ConsumerState<SignUp> {
                     height: 60,
                   ),
                   button(
-                    label: "Sign Up",
+                    label: ref.watch(isLoading) ? "Signing up..." : "Sign Up",
                     labelColor: Colors.white,
                     onButtonPressed: () => _controller.handleSignUp(),
                   ),

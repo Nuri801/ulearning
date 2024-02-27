@@ -26,4 +26,8 @@ class RegisterNotifier extends _$RegisterNotifier {
     state = state.copyWith(rePassword: repw);
   }
 
+  String getUserName() {
+    return state.userName;
+  }
+
 }
