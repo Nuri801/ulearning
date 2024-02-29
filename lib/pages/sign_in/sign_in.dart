@@ -14,9 +14,7 @@ class SignIn extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     final regProvider = ref.watch(registerNotifierProvider);
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
