@@ -19,7 +19,6 @@ class SignUp extends ConsumerStatefulWidget {
   ConsumerState<SignUp> createState() => _SignUpState();
 }
 
-
 class _SignUpState extends ConsumerState<SignUp> {
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController idController = TextEditingController();
