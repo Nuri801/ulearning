@@ -73,6 +73,7 @@ class SignIn extends ConsumerWidget {
                     Navigator.pushNamed(context, "signUp");
                   },
                 ),
+
               ],
             ),
           ),
