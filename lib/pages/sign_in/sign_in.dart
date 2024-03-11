@@ -8,10 +8,8 @@ import '../sign_up/notifier/register_notifier.dart';
 
 class SignIn extends ConsumerWidget {
   SignIn({super.key});
-
   final TextEditingController idController = TextEditingController();
   final TextEditingController pwController = TextEditingController();
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final regProvider = ref.watch(registerNotifierProvider);
