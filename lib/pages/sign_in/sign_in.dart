@@ -6,7 +6,6 @@ import '../../common/widgets/appbar.dart';
 import '../../common/widgets/text_field.dart';
 import '../sign_up/notifier/register_notifier.dart';
 
-
 class SignIn extends ConsumerWidget {
   SignIn({super.key});
   final TextEditingController idController = TextEditingController();
