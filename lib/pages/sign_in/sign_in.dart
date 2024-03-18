@@ -12,9 +12,7 @@ class SignIn extends ConsumerWidget {
   final TextEditingController pwController = TextEditingController();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     final regProvider = ref.watch(registerNotifierProvider);
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
