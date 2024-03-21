@@ -15,6 +15,7 @@ class SignIn extends ConsumerWidget {
     final regProvider = ref.watch(registerNotifierProvider);
     return GestureDetector(
       onTap: () {
+
         FocusScope.of(context).unfocus();
       },
 
